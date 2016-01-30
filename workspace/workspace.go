@@ -7,10 +7,10 @@ import (
 	"github.com/BurntSushi/xgbutil"
 	"github.com/BurntSushi/xgbutil/xrect"
 
-	"github.com/BurntSushi/wingo/event"
-	"github.com/BurntSushi/wingo/layout"
-	"github.com/BurntSushi/wingo/logger"
-	"github.com/BurntSushi/wingo/prompt"
+	"github.com/pascience/wingo/event"
+	"github.com/pascience/wingo/layout"
+	"github.com/pascience/wingo/logger"
+	"github.com/pascience/wingo/prompt"
 )
 
 type Workspace struct {

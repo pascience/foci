@@ -8,10 +8,10 @@ import (
 
 	"github.com/BurntSushi/gribble"
 
-	"github.com/BurntSushi/wingo/logger"
-	"github.com/BurntSushi/wingo/wm"
-	"github.com/BurntSushi/wingo/workspace"
-	"github.com/BurntSushi/wingo/xclient"
+	"github.com/pascience/wingo/logger"
+	"github.com/pascience/wingo/wm"
+	"github.com/pascience/wingo/workspace"
+	"github.com/pascience/wingo/xclient"
 )
 
 type GetActive struct {

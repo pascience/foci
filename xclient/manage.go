@@ -10,15 +10,15 @@ import (
 	"github.com/BurntSushi/xgbutil/xrect"
 	"github.com/BurntSushi/xgbutil/xwindow"
 
-	"github.com/BurntSushi/wingo/event"
-	"github.com/BurntSushi/wingo/focus"
-	"github.com/BurntSushi/wingo/frame"
-	"github.com/BurntSushi/wingo/heads"
-	"github.com/BurntSushi/wingo/hook"
-	"github.com/BurntSushi/wingo/logger"
-	"github.com/BurntSushi/wingo/stack"
-	"github.com/BurntSushi/wingo/wm"
-	"github.com/BurntSushi/wingo/workspace"
+	"github.com/pascience/wingo/event"
+	"github.com/pascience/wingo/focus"
+	"github.com/pascience/wingo/frame"
+	"github.com/pascience/wingo/heads"
+	"github.com/pascience/wingo/hook"
+	"github.com/pascience/wingo/logger"
+	"github.com/pascience/wingo/stack"
+	"github.com/pascience/wingo/wm"
+	"github.com/pascience/wingo/workspace"
 )
 
 func New(id xproto.Window) *Client {
