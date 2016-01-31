@@ -1,0 +1,32 @@
+#!/bin/sh
+pkgname=github.com/pascience/wingo
+
+# list dependencies between imported packages
+# that are not part of the standard library
+(go list -f \
+  '{{range .Imports}}{{printf "\t%q -> %q;\n" $.ImportPath .}}{{end}}' \
+  $(go list -f '{{join .Deps " "}}' $pkgname) \
+  $pkgname
+) \
+| grep "github.*github" \
+| sed s!github\.com/pascience!psc!g \
+| sed s!github\.com/BurntSushi!BntS!g \
+> alldeps
+
+function depgraph() {
+	name=$1
+	regex=$2
+	(echo "digraph G {"
+
+		cat alldeps \
+		| egrep $regex
+
+	echo "}") \
+	| dot -Tsvg -o $name.svg
+}
+
+depgraph deps-inside-psc 'psc.*psc'
+depgraph deps-inside-bnts 'BntS.*BntS'
+depgraph deps-to-bnts 'psc.*BntS'
+
+rm alldeps
